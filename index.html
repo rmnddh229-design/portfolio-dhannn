@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dhanzz — Portfolio</title>
+  <meta name="description" content="Portofolio pribadi Dhanzz: project, skill, dan kontak." />
+  <meta property="og:title" content="Dhanzz — Portfolio" />
+  <meta property="og:description" content="Portofolio pribadi Dhanzz: project, skill, dan kontak." />
+  <meta property="og:image" content="/assets/img/og-cover.png" />
+  <link rel="icon" href="/assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- AOS & Lucide via CDN -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="/script.js"></script>
+</head>
+<body class="no-js">
+  <div id="intro-screen">
+    <div class="intro-bg"></div>
+    <h1 id="intro-text">Welcome</h1>
+  </div>
+
+  <header class="site-header container">
+    <a class="brand" href="#home">dhanzz<span>.</span></a>
+    <nav class="nav">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn btn--primary">Kontak</a>
+      <button id="themeToggle" aria-label="Toggle dark mode" class="icon-btn" title="Tema gelap/terang">
+        <i data-lucide="moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero container" data-aos="fade-up" data-aos-delay="300">
+      <div class="hero__text">
+        <p class="eyebrow">Available for work</p>
+        <h1 class="split" data-split>Halo, saya <span>Dhanzz</span> — membangun website yang <em>clean</em>, cepat, dan estetik.</h1>
+        <p class="lead">Fokus pada pengalaman pengguna, animasi halus, dan performa. Scroll ke bawah untuk melihat karya saya.</p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">Lihat Project</a>
+          <a href="https://wa.me/62895417304357" class="btn btn--ghost" target="_blank" rel="noopener">Hire Me</a>
+        </div>
+        <ul class="hero__badges">
+          <li>Frontend</li><li>UI/UX</li><li>Web Animations</li>
+        </ul>
+      </div>
+      <div class="hero__art" data-aos="zoom-in" data-aos-delay="150">
+        <!-- Ganti svg/logo kamu di bawah ini -->
+        <img src="/assets/img/leviathan.png" alt="Logo Dhanzz" class="hero__logo">
+      </div>
+    </section>
+
+    <section id="projects" class="container section" aria-label="Projects">
+      <div class="section__head" data-aos="fade-up">
+        <h2 data-aos="fade-up">Selected Projects</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Beberapa project pilihan yang menonjolkan kualitas desain dan keterampilan teknis.</p>
+      </div>
+      <div class="grid cards">
+        <article class="card" data-aos="fade-up" data-aos="fade-up">
+          <img src="/assets/img/project-1.webp" alt="Preview Project 1">
+          <div class="card__body">
+            <h3>Landing Page Brand Hijab</h3>
+            <p>Landing page premium & mobile-first untuk Aqalisa.id dengan fokus pada tipografi dan konversi.</p>
+            <div class="chip-row">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">AOS</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-aos="fade-up" data-aos="fade-up" data-aos-delay="100">
+          <img src="/assets/img/project-2.webp" alt="Preview Project 2">
+          <div class="card__body">
+            <h3>Dashboard Order</h3>
+            <p>Dashboard admin ringan untuk monitoring order dan stok dengan grafik interaktif.</p>
+            <div class="chip-row">
+              <span class="chip">Vite</span><span class="chip">JS</span><span class="chip">Chart.js</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-aos="fade-up" data-aos="fade-up" data-aos-delay="200">
+          <img src="/assets/img/project-3.webp" alt="Preview Project 3">
+          <div class="card__body">
+            <h3>Portfolio Animasi</h3>
+            <p>Website portofolio dengan animasi halus dan dark mode otomatis.</p>
+            <div class="chip-row">
+              <span class="chip">GSAP</span><span class="chip">Intersection</span><span class="chip">ARIA</span>
+            </div>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Live</a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="container section" aria-label="Skills">
+      <div class="section__head" data-aos="fade-up">
+        <h2 data-aos="fade-up">Skills</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Teknologi yang sering saya gunakan.</p>
+      </div>
+      <ul class="skills" data-aos="fade-up" data-aos-delay="150" data-aos="fade-up">
+        <li><i data-lucide="code-2"></i> HTML5</li>
+        <li><i data-lucide="sparkles"></i> CSS3 / Tailwind</li>
+        <li><i data-lucide="blocks"></i> JavaScript</li>
+        <li><i data-lucide="framer"></i> Animations</li>
+        <li><i data-lucide="rocket"></i> Vercel / GitHub</li>
+      </ul>
+    </section>
+
+    <section id="about" class="container section" aria-label="About">
+      <div class="about" data-aos="fade-up" data-aos-delay="150" data-aos="fade-up">
+        <div class="about__text">
+          <h2>Tentang Saya</h2>
+          <p>Saya adalah developer yang menikmati merancang antarmuka yang bersih dan efektif. Prinsip saya sederhana: <strong>estetik, aksesibel, dan cepat.</strong></p>
+          <p>Saat tidak ngoding, saya eksplorasi tipografi dan micro-interactions untuk meningkatkan UX.</p>
+          <div class="about__meta">
+            <div><span>Base</span> Indonesia</div>
+            <div><span>Bahasa</span> Indonesia · English</div>
+          </div>
+        </div>
+        <ul class="about__stats">
+          <li><span class="num">3+</span><span>Project Selesai</span></li>
+          <li><span class="num">100%</span><span>Responsif</span></li>
+          <li><span class="num">A+</span><span>Perf Score</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="container section" aria-label="Contact">
+      <div class="contact" data-aos="fade-up" data-aos-delay="180" data-aos="fade-up">
+        <h2>Kolaborasi?</h2>
+        <p>Kirimkan saya pesan melalui form di bawah atau email langsung.</p>
+        <form class="contact__form" action="https://formspree.io/f/your-id" method="POST">
+          <label>Nama
+            <input required type="text" name="nama" placeholder="Nama kamu">
+          </label>
+          <label>Email
+            <input required type="email" name="email" placeholder="email@contoh.com">
+          </label>
+          <label>Pesan
+            <textarea required name="pesan" rows="5" placeholder="Ceritakan kebutuhanmu..."></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">Kirim</button>
+        </form>
+        <div class="contact__links">
+          <a href="mailto:hello@yourdomain.com"><i data-lucide="mail"></i>Email</a>
+          <a href="https://github.com/dhanztodd" target="_blank" rel="noopener"><i data-lucide="github"></i>GitHub</a>
+          <a href="https://www.linkedin.com/dhantoddd" target="_blank" rel="noopener"><i data-lucide="linkedin"></i>LinkedIn</a>
+          <a href="https://wa.me/62895417304357" target="_blank" rel="noopener"><i data-lucide="message-circle"></i>WhatsApp</a>
+        </div>
+      </div>
+    </section
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> <strong>dhanzz</strong>. Dibuat dengan ♥. Terakhir dibangun: 2025-11-10 11:43:25</p>
+  </footer>
+</body>
+</html>
