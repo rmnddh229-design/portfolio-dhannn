@@ -41,3 +41,24 @@ document.querySelectorAll('[data-split]').forEach(el=>{
     });
   }, 600);
 });
+
+
+// Welcome Gate logic
+(function(){
+  try{
+    const gateSeen = sessionStorage.getItem('gate:seen');
+    const gate = document.getElementById('welcome-gate');
+    const startBtn = document.getElementById('wg-start');
+    if(!gateSeen && gate){
+      document.documentElement.dataset.gate = 'open';
+      startBtn?.addEventListener('click', () => {
+        sessionStorage.setItem('gate:seen','1');
+        gate.classList.add('ready');
+        document.documentElement.dataset.gate = '';
+        setTimeout(()=> gate.remove(), 900);
+      });
+    }else{
+      gate?.remove();
+    }
+  }catch(e){ console.warn(e); }
+})();
