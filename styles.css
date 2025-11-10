@@ -400,3 +400,35 @@ html[data-gate="open"]{ overflow:hidden }
 /* Hero right clean & smaller image */
 .hero__art img{ max-width: 360px !important; border-radius: 50%; background: transparent !important; }
 .uiux-hero .hero__text{ background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); }
+
+
+/* ===== Dark Blue + Purple Flare theme ===== */
+:root{
+  --bg:#070b12;
+  --card:#0c1119;
+  --text:#e8eef9;
+  --muted:#a7b4cc;
+  --brand:#7c5cff;
+  --brand-2:#6aa9ff;
+  --line:rgba(255,255,255,.08);
+}
+body{
+  background:
+    radial-gradient(1000px 600px at 20% -10%, rgba(124,92,255,.18), transparent 50%),
+    radial-gradient(900px 520px at 110% 15%, rgba(106,169,255,.16), transparent 55%),
+    #070b12;
+}
+.card img{height:200px; object-fit:cover; border-bottom:1px solid var(--line)}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015))}
+
+/* Mobile layout like Eki's */
+@media (max-width: 768px){
+  .hero{display:flex; flex-direction:column; align-items:center; gap:20px; padding:56px 18px 24px}
+  .hero__text{background:transparent; padding:0; text-align:center}
+  .hero__art{margin-top:8px}
+  .hero__art img{max-width:220px; width:220px; height:220px; border-radius:50%; object-fit:cover}
+  .hero__cta{justify-content:center}
+  .hero__quick{justify-content:center}
+  .cards .card{grid-column:span 12}
+  .card img{height:180px}
+}
