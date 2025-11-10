@@ -210,3 +210,101 @@ body[data-theme='light'] .site-header{background:linear-gradient(180deg, rgba(24
 @keyframes introTextIn{
   to{ opacity:1; transform:translateY(0);}
 }
+
+
+/* HOLOGRAM LIQUID WAVE INTRO */
+#intro-screen{
+  position:fixed; inset:0; z-index:9999;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  background:radial-gradient(circle at 30% 50%, rgba(98,0,255,0.35), rgba(0,0,0,0.4)),
+             radial-gradient(circle at 80% 30%, rgba(0,200,255,0.25), transparent),
+             linear-gradient(120deg, #4f00ff, #003cff, #ff00e9);
+  background-size: 200% 200%;
+  animation:introWave 6s ease-in-out infinite, introFadeOut 1.3s ease forwards 3.2s;
+}
+@keyframes introWave {
+  0%{ background-position:0% 50%; }
+  50%{ background-position:100% 50%; }
+  100%{ background-position:0% 50%; }
+}
+#intro-text{
+  color:white; font-weight:800;
+  font-size:clamp(40px,6vw,90px);
+  opacity:0; transform:translateY(20px);
+  animation:introTextIn 1.4s ease forwards .6s;
+}
+#intro-sub{
+  color:rgba(255,255,255,0.85);
+  font-weight:300;
+  margin-top:12px;
+  font-size:clamp(14px,2vw,22px);
+  opacity:0; transform:translateY(20px);
+  animation:introTextIn 1.4s ease forwards 1.2s;
+}
+@keyframes introTextIn{
+  to{opacity:1; transform:translateY(0);}
+}
+@keyframes introFadeOut{
+  to{opacity:0; visibility:hidden;}
+}
+
+
+/* ===== UI/UX HERO LEFT PANEL ===== */
+.uiux-hero .hero__text{
+  position: relative;
+  padding: 26px;
+  border-radius: 18px;
+  background:
+    radial-gradient(1200px 400px at -10% -20%, rgba(124,92,255,.18), transparent 65%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.uiux-hero .hero__text::before{
+  content:"";
+  position:absolute; inset:-30%;
+  background:
+    linear-gradient(120deg, rgba(255,45,251,.12), rgba(0,200,255,.12) 60%, transparent 90%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 24px);
+  filter: blur(40px);
+  animation: uiuxFloat 8s ease-in-out infinite alternate;
+  z-index: -1;
+}
+.uiux-hero .hero__text::after{
+  content:"";
+  position:absolute; left: -10%; right:-10%; top:-2px; height:2px;
+  background: linear-gradient(90deg, rgba(255,255,255,.0), rgba(255,255,255,.45), rgba(255,255,255,.0));
+  opacity:.6;
+}
+@keyframes uiuxFloat {
+  0%{ transform: translate3d(-3%, -2%, 0) scale(1.1); }
+  100%{ transform: translate3d(3%, 2%, 0) scale(1.2); }
+}
+
+/* ===== BUTTON SYSTEM (unified) ===== */
+.btn--neon{
+  background: radial-gradient(120% 120% at 20% 0%, rgba(255,45,251,.35), transparent 40%),
+              linear-gradient(90deg, var(--brand), var(--brand-2));
+  border: none;
+  box-shadow: 0 10px 30px rgba(124,92,255,.35), inset 0 1px 0 rgba(255,255,255,.35);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn--neon:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(124,92,255,.5);
+  filter: brightness(1.05);
+}
+
+/* small pill buttons under hero */
+.hero__quick{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px }
+.btn--pill{
+  padding:8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid var(--line);
+  font-weight:700; font-size:.9rem; color:var(--text); text-decoration:none;
+}
+.btn--pill:hover{ background: rgba(255,255,255,.08); }
+
+/* Optional: remove old styles impact */
+.hero__badges{ display:none }
